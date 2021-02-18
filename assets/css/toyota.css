@@ -1,0 +1,274 @@
+/*
+
+1. alert box on valiating data
+2. Main section
+3. Customer information box
+4. part order information box
+5. Information output box
+6. Cumpute, New order and Exit buttons
+7. pop up on exit
+
+*/ 
+ 
+ html body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 150%;
+    font-family: calibri;
+    font-weight: 400;
+}
+/* 1. alert box on valiating data */
+.alert-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 94, 0, 0.4);
+    display: none;
+}
+.alerts{
+    background-color: rgb(255, 121, 44);
+    width: 34%;
+    padding: 5px;
+    margin: 16% 30% 0 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(70, 26, 0, 0.4);
+}
+#alert-icon{
+    color:rgb(46, 17, 0);
+    font-size: 200%;
+    padding: 10px;
+}
+.text-button, .text-button-exit{    
+    text-align: center;
+    cursor: default;
+}
+.alert-btn{
+    margin: 20px;
+    background-color:rgb(255, 94, 0, 0.4);
+    height: 35px;
+    width: 70px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px 1px rgba(70, 26, 0, 0.4);
+}
+
+/* 2. Main section */
+.information-containers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.fieldset{
+    border-color: whitesmoke;
+}
+.toyota-main-contant{
+    margin: 30px;
+    padding: 20px;
+    background-color: rgba(253, 153, 59, 0.4);
+}
+/* 3. customer information box */
+.customer-information{
+    width: 53%;
+    margin: 10px;
+    background-color: rgb(255, 94, 0, 0.4);
+}
+.customer-id-input{
+    outline: none;
+    height: 37px;
+    width: 30%;
+    margin: 0 0 0 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.name-input{
+    outline: none;
+    height: 37px;
+    width: 73%;
+    margin: 0 0 0 73px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.State-input{
+    outline: none;
+    height: 37px;
+    width: 15%;
+    margin: 0 0 0 82px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.retail-input-checked{
+    height: 22px;
+    width: 22px;
+    margin: 0 0 0 27%;
+    border-radius: 4px;
+}
+.information{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+}
+/* 3. shiping information box */
+.shiping-info{
+    margin: 10px;
+    width: 43%;
+    background-color: rgb(255, 94, 0, 0.4);
+}
+.shippings{
+    display: flex;
+    flex-direction: row;
+}
+.shippings-right{
+    margin: 0 0 0 20%;
+}
+.shipping-mtds{
+    margin: 23% 0 13% 0;
+}
+.shipping-inputs{
+    height: 18px;
+    width: 18px;
+}
+
+/* 4. part order information box */
+.part-order-info{
+    margin: 10px;
+    width: 53%;
+    background-color: rgb(255, 94, 0, 0.4);
+}
+.part-infor{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+.part-number-input{
+    outline: none;
+    height: 37px;
+    width: 70%;
+    margin: 0 0 0 30px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.description-input{
+    outline: none;
+    height: 37px;
+    width: 70%;
+    margin: 0 0 0 43px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+.price-input{
+    outline: none;
+    height: 37px;
+    width: 20%;
+    margin: 0 0 0 23px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: right;
+}
+.quantity{
+    margin: 0 0 0 21.5%;
+}
+.quantity-input{
+    outline: none;
+    height: 37px;
+    width: 10%;
+    margin: 0 0 0 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: right;
+}
+.oversize-container-checkbox{
+    height: 22px;
+    width: 22px;
+    margin: 0 10px 0 26%;
+    border-radius: 4px;
+}
+
+
+/* 5. Information output box */
+.output-box{
+    margin: 10px;
+    width: 43%;
+    background-color: rgb(255, 94, 0, 0.4);
+}
+.output-computed{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+.outputs{
+    height: 40px;
+    width: 45%;
+    padding: 0 10px 0 0;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: right;
+}
+.cost-output{
+    margin: 0 0 0 200px;
+}
+.tax-output{
+    margin: 0 0 0 157px;
+}
+.shipping-output{
+    margin: 0 0 0 27px;
+}
+.total-computed{
+    margin: 0 0 0 199px;
+}
+
+/* 6. Cumpute, New order and Exit buttons */
+.btns{
+    margin: 10px 0px 0px 10px;
+}
+.btn{
+    background-color: rgb(255, 94, 0, 0.4);
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+}
+.exit-btn{
+    margin: 0px 0px 0px 62%;
+}
+
+/* 7. pop up on exit */
+.exit-optn-btns{
+    display: flex;
+    flex-direction: row;
+    margin: 0 30% 0 30%;
+}
+.exit-optn-btn{
+    margin: 20px;
+    background-color:rgb(255, 94, 0, 0.4);
+    height: 35px;
+    width: 70px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 1px 1px rgba(70, 26, 0, 0.4) ;
+}
+.no{
+    font-size: 18px;
+}
+
+
+@media(max-width: 1200px){
+    .customer-information, .shiping-info, .part-order-info, .output-box{
+        width: 100%;
+    }
+    .alerts{
+        margin: 50% 30% 50% 30%;
+    }
+    .exit-btn{
+        margin: 0px 0px 0px 57%;
+    }
+}

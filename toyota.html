@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Uganda</title>
+    <link rel="stylesheet" href="assets/css/toyota.css">
+    <link rel="stylesheet" href="icons/css/all.css">
+</head>
+<body>
+    <!-- ==== Main section begining ===== -->
+    <section class="toyota-main-contant">
+        <!-- ==== Alert box begining ==== -->
+        <section class="alert-box" id="alert-box" >
+            <div class="alerts">
+                <i class="fas fa-exclamation-triangle" id="alert-icon"></i>
+                <div class="text-button">
+                    <div  id="alert"></div>
+                    <button type="button" class="alert-btn" id="alert-btn" onclick="removeAlert()">OK</button>
+                </div>
+            </div>
+        </section>
+        <!-- ==== Alert box end ==== -->
+
+        <form action="">
+            <section class="information-containers">
+
+                <!--==== Customer information begining ====-->
+                <div class="customer-information">
+                    <fieldset class="fieldset">
+                        <legend>Customer Information</legend>
+                        <div class="information">
+                            <label for="customer-id">Customer ID:</label>
+                            <input type="text" class="customer-id-input" id="customer-id" autofocus>
+                        </div>
+                        <div class="information">
+                            <label for="name">Name:</label>
+                            <input type="text" class="name-input" id="customer-name">
+                        </div>
+                        <div class="state-retail-customer information">
+                            <label for="state">State:</label>
+                            <input type="text" class="State-input" id="customer-state">
+                            <input type="checkbox" class="retail-input-checked" id="retail-customer" checked>
+                            <label for="">Retail Customer</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <!--==== Customer information ends ====-->
+
+                <!--==== Shipping information begining ====-->
+                <div class="shiping-info">
+                    <fieldset class="fieldset shipping">
+                        <legend>Shipping</legend>
+                        <div class="shippings">
+                            <div>
+                                <div class="shipping-mtds">
+                                    <input type="radio" value="value" name="value" class="shipping-inputs" id="UPS" checked>
+                                    <label for="">UPS</label>
+                                </div>
+                                <div class="shipping-mtds">
+                                    <input type="radio" value="value" name="value" class="shipping-inputs" id="UPA">
+                                    <label for="">US Postal Air</label>
+                                </div>
+                            </div>
+                            <div class="shippings-right">
+                                <div class="shipping-mtds">
+                                    <input type="radio" value="value" name="value" class="shipping-inputs" id="FEG">
+                                    <label for="">Fed Ex Ground</label>
+                                </div>
+                                <div class="shipping-mtds">
+                                    <input type="radio" value="value" name="value" class="shipping-inputs" id="FEA">
+                                    <label for="">Fed Ex Air</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!--==== Shipping information end ====-->
+            
+                <!--==== part order information begining ====-->
+                <div class="part-order-info">
+                    <fieldset class="fieldset">
+                        <legend>Part Order</legend>
+                        <div class="part-infor">
+                            <label for="">Part Number:</label>
+                            <input type="text" class="part-number-input" id="part-no">
+                        </div>
+                        <div class="part-infor">
+                            <label for="">Description:</label>
+                            <input type="text" class="description-input" id="description">
+                        </div>
+                        <div class="price-quantity part-infor">
+                            <label for="">Price per part:</label>
+                            <input type="number" class="price-input" id="price">
+                            <label for="" class="quantity">Quantity:</label>
+                            <input type="number" class="quantity-input"  id="quantity">
+                        </div>
+                        <div class="oversize-container part-infor">
+                            <input type="checkbox" class="oversize-container-checkbox" id="oversize-container">
+                            <label for="">Oversize Container?</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <!--==== part order information ends ====-->
+
+                <!--==== information output computed begining ====-->
+                <div class="output-box">
+                    <fieldset class="fieldset">
+                        <legend>Output</legend>
+                        <div class="output-computed">
+                            <label for="">Cost:</label>
+                            <a class="outputs cost-output" id="cost"></a>
+                        </div>
+                        <div class="output-computed">
+                            <label for="">Sales Tax:</label>
+                            <a class="outputs tax-output" id="tax"></a>
+                        </div>
+                        <div class="output-computed">
+                            <label for="">Shiping and Handeling:</label>
+                            <a class="outputs shipping-output" id="shipping"></a>
+                        </div>
+                        <div class="output-computed">
+                            <label for="">Total:</label>
+                            <a  class="outputs total-computed" id="total"></a>
+                        </div>
+                    </fieldset>
+                </div>
+                <!--==== information output computed ends ====-->
+            </section>
+
+            <!--==== Compute New order exit buttons ====-->
+            <section class="btns">
+                <button type="button" class="compute-btn btn"  onclick="validateData()">Compute</button>
+                <button type="button" class="new-order-btn btn" onclick="location.reload()">New Order</button>
+                <button type="button" class="exit-btn btn" onclick="exitProgramOptn()">Exit</button>
+            </section>
+            <!--==== Compute New order exit buttons end ====-->
+        </form>
+        <!--====Pop up on clicking exit button = === -->
+        <section class="alert-box" id="exit">
+            <div class="alerts">
+                <p class="text-button-exit">Do you want to Exit this program?</p>
+                <div class="exit-optn-btns">
+                    <a href="" class="text-button-exit exit-optn-btn" onclick="self.close()">Yes</a>  
+                    <button class="no text-button-exit exit-optn-btn" onclick="exitNo()">No</button>
+                </div>
+            </div>
+        </section>
+        <!--====Pop up End ====-->
+    </section>
+    <!-- ==== Main section end ===== -->
+    <script src="assets/js/toyota.js"></script>
+</body>
+</html>
